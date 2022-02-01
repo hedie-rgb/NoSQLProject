@@ -80,6 +80,12 @@ db.Flights.find({$and:[
     ]})
 	
 8.
+db.Flights.find({$and:[
+        {"departureCity": "Istanbul"},
+        {"arrivalCity": "Moscow"},
+        {"capacity" : "Airbus A320"},
+        {{$toDate: "$date"} :  {$gt :  ISODate(d1), $lt : ISODate(d2)}}
+    ]})
 
 9.
 db.Flights1.find({$and:[
